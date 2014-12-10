@@ -65,7 +65,9 @@ function cgit_downloads_shortcode () {
         return FALSE;
     }
 
-    $downloads = get_field('downloads', FALSE, FALSE);
+    global $post;
+
+    $downloads = get_post_meta($post->ID, 'downloads', FALSE);
     $output    = '';
 
     if ($downloads) {
