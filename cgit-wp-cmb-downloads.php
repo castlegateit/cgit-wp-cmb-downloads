@@ -37,6 +37,7 @@ function cgit_download_fields ($meta_boxes) {
             'type'       => 'group',
             'fields'     => $subfields,
             'repeatable' => TRUE,
+            'sortable'   => TRUE,
         ),
     );
 
