@@ -58,6 +58,20 @@ function cgit_download_fields ($meta_boxes) {
 add_filter('cmb_meta_boxes', 'cgit_download_fields');
 
 /**
+ * Add entry in user guide
+ */
+function cgit_downloads_user_guide($sections) {
+
+    $file = dirname(__FILE__) . '/user-guide.php';
+    $sections['cgit-wp-cmb-downloads'] = cgit_get_user_guide($file);
+
+    return $sections;
+
+}
+
+add_filter('cgit_user_guide_sections', 'cgit_downloads_user_guide', 100);
+
+/**
  * Add basic shortcode
  */
 function cgit_downloads_shortcode () {
