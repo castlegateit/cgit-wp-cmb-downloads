@@ -30,3 +30,8 @@
     echo $list;
 
 ?>.</p>
+
+<figure>
+    <img src="<?php echo plugin_dir_url(__FILE__); ?>images/fields.png" alt="" />
+    <figcaption>The downloads field. This will appear below the main content editor fields.</figcaption>
+</figure>
