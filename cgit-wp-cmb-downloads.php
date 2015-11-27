@@ -63,7 +63,7 @@ add_filter('cmb_meta_boxes', 'cgit_download_fields');
 function cgit_downloads_user_guide($sections) {
 
     $file = dirname(__FILE__) . '/user-guide.php';
-    $sections['cgit-wp-cmb-downloads'] = cgit_get_user_guide($file);
+    $sections['cgit-wp-cmb-downloads'] = Cgit\UserGuide::getFile($file);
 
     return $sections;
 
